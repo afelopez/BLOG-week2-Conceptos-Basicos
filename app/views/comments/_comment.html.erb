@@ -1,0 +1,13 @@
+<%= div_for comment do %>
+<!-- Se usa sin arroba ya que es una lista de varios comentarios y no es solo uno
+como en el caso del shoow del post -->
+  <p>
+    <strong>
+      Posted <%= time_ago_in_words(comment.created_at) %>
+    </strong>
+    <br>
+    <%= h(comment.body) %>
+  </p>
+
+
+<% end %>
